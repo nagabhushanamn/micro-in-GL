@@ -6,20 +6,31 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_bank
-    username: root
-    password: root1234
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:bank_db
+    username: sa
+    password: 
     
-
-
+    
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
 
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create
     
-    
+   
     
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+      
+  
+      
+      
+      
