@@ -24,7 +24,7 @@ const api = {
         return axios.get(`${'http://localhost:8184'}/cart/${cartId}`)
     },
     checkout(cartId){
-        return axios.get(`${'http://localhost:8185'}/cart/${cartId}`)
+        return axios.post(`${'http://localhost:8185'}/checkout/${cartId}`)
     }
 }
 

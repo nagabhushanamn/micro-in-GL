@@ -31,9 +31,6 @@ export function cartReducer(state = {}, action) {
             return cart;
 
         }
-        case 'CHECKOUT': {
-            return {}
-        }
         default:
             return state;
     }
