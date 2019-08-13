@@ -49,9 +49,9 @@ public class CartController {
 		return new ResponseEntity<>(cartLines, HttpStatus.CREATED);
 	}
 
-	@DeleteMapping
-	public ResponseEntity<?> delete(@PathVariable String user) {
-		redisTemplate.delete(user);
+	@DeleteMapping("/{id}")
+	public ResponseEntity<?> delete(@PathVariable String id) {
+		redisTemplate.delete(id);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
