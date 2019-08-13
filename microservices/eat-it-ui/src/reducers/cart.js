@@ -1,8 +1,19 @@
 
-
 export function cartReducer(state = {}, action) {
     const { type } = action;
     switch (type) {
+        case 'CHECKOUT':{
+            return {}
+        }
+        case 'LOAD_CART': {
+            //let cart = localStorage.getItem('user-cart')
+            //cart = JSON.parse(cart) || {}
+            //return cart;
+            //return state;
+
+            let { cart } = action;
+            return cart;
+        }
         case 'BUY': {
             let { item, qty } = action;
             qty = qty || 1
@@ -16,6 +27,7 @@ export function cartReducer(state = {}, action) {
                 cartLine = { item, qty: 1 }
             }
             cart = { ...cart, [id]: cartLine }
+            //localStorage.setItem('user-cart', JSON.stringify(cart))
             return cart;
 
         }

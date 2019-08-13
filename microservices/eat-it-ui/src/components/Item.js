@@ -19,8 +19,9 @@ class Item extends Component {
         addNewReview(id, review)
     }
     handleBuy() {
-        let { value: item, buy } = this.props;
-        buy(item)
+        let { value: item, buy, qty } = this.props;
+        qty = qty || 0
+        buy(item, qty+1)
     }
     renderBuyBtn(item) {
         if (item.canBuy) {

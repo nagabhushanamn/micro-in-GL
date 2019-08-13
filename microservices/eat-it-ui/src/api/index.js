@@ -16,6 +16,15 @@ const api = {
     },
     doLogin(email, password) {
         return axios.post(`${baseUrl}/Users/login`, { email, password })
+    },
+    buy(cartId,cartLine){
+        return axios.post(`${'http://localhost:8184'}/cart/${cartId}`, cartLine)
+    },
+    loadCart(cartId){
+        return axios.get(`${'http://localhost:8184'}/cart/${cartId}`)
+    },
+    checkout(cartId){
+        return axios.get(`${'http://localhost:8185'}/cart/${cartId}`)
     }
 }
 

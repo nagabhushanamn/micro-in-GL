@@ -12,6 +12,7 @@ import { connect } from 'react-redux'
 
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Login from './components/Login';
+import { loadCart } from './actions/cart';
 
 class App extends Component {
 
@@ -33,6 +34,9 @@ class App extends Component {
       return (
         <div className="alert alert-warning">{reqStatus.message}</div>
       )
+  }
+  componentDidMount() {
+    this.props.loadCart();
   }
   render() {
     return (
@@ -84,6 +88,7 @@ const mapStateToProps = state => {
     reqStatus: state.reqStatus
   }
 }
+const mapDispatchToProps = { loadCart }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
