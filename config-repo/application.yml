@@ -4,9 +4,9 @@ domain: e-commerce
 
 
 
-eureka:
-  client:
-    service-url: 
-      defaultZone: http://localhost:8002/eureka
+# eureka:
+#   client:
+#     service-url: 
+#       defaultZone: http://localhost:8002/eureka
       
       
