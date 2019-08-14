@@ -1,0 +1,31 @@
+
+server:
+  port: 9000
+  
+  
+  servlet:
+    context-path: /service
+    
+
+spring:
+  security:
+    user:
+      name: Nag
+      password: shhh
+      roles:
+      - TRAINER
+      
+
+security:
+  oauth2:
+    client:
+      client-id: learning_app
+      client-secret: shhh123
+      authorized-grant-types:
+      - password
+      - client_credentials
+      - authorization_code
+      - refresh_token 
+      scope:
+      - read
+      - write       

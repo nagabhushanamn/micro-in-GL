@@ -1,0 +1,51 @@
+
+
+to run any process ?
+
+what we need basically ?
+
+    high-level
+    ---------
+
+    - cpu(s)
+    - memory
+
+    low-level
+    ---------
+    - os
+    - runtime
+    - dependencies & F.Ws
+    - application code
+    - isolated file-system
+    - isolated n/w ports
+    - ..............
+
+    
+
+
+what is Docker ?
+
+    => containerization tech
+
+
+    step-1 : build
+            how ?
+            -> using 'Dockerfile'
+    step-2 : ship
+            -> to registry ( public | private )
+    step-3: run
+            image ==> container(s)        
+    -----------------------------------------------------------
+
+
+    container management/orchestration tool
+    ----------------------------------------
+
+
+    => docker-compose 
+    => docker-swarm
+    => kubernetes
+    => Apache mesos
+    => ...
+
+    -------------------------------------------            

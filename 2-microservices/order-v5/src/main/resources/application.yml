@@ -1,0 +1,28 @@
+
+  
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:order_db
+    username: sa
+    password: 
+    
+    
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create  
+      
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - 'hystrix.stream'

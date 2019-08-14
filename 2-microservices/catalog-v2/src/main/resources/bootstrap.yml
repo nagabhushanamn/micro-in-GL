@@ -1,0 +1,18 @@
+
+server:
+  port: 8081
+
+
+spring:
+  application:
+    name: catalog
+    
+
+  cloud:
+    config:
+      uri:
+      - http://localhost:8001
+      
+  profiles:
+    active: 
+    - blr  

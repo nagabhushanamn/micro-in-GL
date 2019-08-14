@@ -1,0 +1,16 @@
+   
+    
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: cart
+    
+  cloud:
+    config:
+      uri:
+      - http://localhost:8001
+   
+  
+  
