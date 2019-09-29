@@ -1,9 +1,6 @@
 
 domain: e-commerce
 
-
-
-
 eureka:
   client:
     service-url: 
